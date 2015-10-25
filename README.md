@@ -5,10 +5,10 @@ The purpose of this project is to demonstrate your ability to collect, work with
 require(data.table)
 require(dplyr)
 
-# Set current working directoty 
+## Set current working directoty 
 setwd("C:/R/Get and Clean data/Assignment")
 
-# Remove all objects
+## Remove all objects
 rm(list = ls())
 
 ## Task 1: Merges the training and the test sets to create one data set.
@@ -67,7 +67,8 @@ rm(list = ls())
     colnames(data_subject) <- c("Subject_ID")
     rm(testSubject,trainSubject)
     
-    # combine data_subject, data_acticity_label and dataset to create one data set using cbind
+    # combine data_subject, data_acticity_label and dataset to create one data set 
+    # using cbind
     dataset = cbind(data_subject,data_activity,dataset)
     rm(data_subject,data_activity)
 ## Finish task 3    
