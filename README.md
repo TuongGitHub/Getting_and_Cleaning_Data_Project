@@ -33,6 +33,7 @@ rm(list = ls())
     
     # Only the measurement on mean and standard deviation is selected
     features <- features[features$V2 %like% "mean" |features$V2 %like% "std" ]
+    features <- features[!features$V2 %like% "meanFreq"]
     
     # using variable V1 in selectefeatures as selected column indices 
     dataset <- dataset[,features$V1]
